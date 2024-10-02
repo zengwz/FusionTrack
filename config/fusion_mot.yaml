@@ -1,0 +1,29 @@
+train_or_test: 'training'
+detector3d: 'pointgnn'
+detector2d: 'rrc'
+SF_thres_2d: 0.0
+SF_thres_3d: 0.5
+dataset_path: "data/kitti_tracking"
+save_path: 'evaluation/results/sha_key/data'
+global_xy_save_path: 'evaluation/results/sha_key/global_xy_data'
+
+tracking_seqs_val: [1,6,8,10,12,13,14,15,16,18,19]
+tracking_seqs_test: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28]
+
+tracking_type: "Car"
+LiDAR_scanning_frequency: 10
+
+motion_model: "CA"
+motion_cost: "giou_3d"
+match_method: "hungarian"
+cost_input: "fuse"
+name_profix: "" # for ablation study
+dist_thres: -0.2
+feat_thres: 0.5
+dist_gate: 100.0 # xyz_cost, no sqrt
+det_filter_thres: 0.6 # iou between unmatched det and dets_2d lower is filtered
+tra_recover_thres: 0.6 # iou between unmatched tra and dets_2d higher is recovered
+max_prediction_num: 15
+
+init_score: 0.5
+update_score: 0.5

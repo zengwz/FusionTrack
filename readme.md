@@ -23,6 +23,9 @@ yaml
 ## Quich start
 run ```python3 kitti_3DMOT.py config/fusion_mot.yaml```
 
+## Contact
+Weizhen Zeng(曾伟真) 18321850051@163.com.
+
 ## Acknowledgement
 Many thanks to the following open-sourced codebases:
 - [PGCMOT](https://github.com/hailanyi/3D-Multi-Object-Tracker)
